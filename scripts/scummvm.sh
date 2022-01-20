@@ -28,6 +28,10 @@ rm -rf "$SYSTEM_DIR"
 unzip scummvm.zip
 rm scummvm.zip
 
+cp -r "${REPO_PATH}/COPYRIGHT" "$SYSTEM_DIR"
+cp -r "${REPO_PATH}/COPYING"* "$SYSTEM_DIR"
+cp -r "${REPO_PATH}/backends/platform/libretro/aux-data/soundfont/README.md" "${SYSTEM_DIR}/Roland_SC-55.txt"
+
 rm -f "$ARCHIVE_FILE"
 7z a -mx9 "$ARCHIVE_FILE" "$SYSTEM_DIR"
 rm -rf "$SYSTEM_DIR"

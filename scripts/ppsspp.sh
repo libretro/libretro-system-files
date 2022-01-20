@@ -22,6 +22,7 @@ cd "$BUILD_DIR"
 rm -rf "$SYSTEM_DIR"
 mkdir "$SYSTEM_DIR"
 cp -r "${REPO_PATH}/assets/"* "$SYSTEM_DIR"
+cp -r "${REPO_PATH}/LICENSE.TXT" "$SYSTEM_DIR"
 
 rm -f "$ARCHIVE_FILE"
 7z a -mx9 "$ARCHIVE_FILE" "$SYSTEM_DIR"
