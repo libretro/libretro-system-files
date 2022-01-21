@@ -8,7 +8,7 @@ stages:
     MEDIA_PATH: .media
   script:
     - mkdir -p ${MEDIA_PATH}/${CI_PROJECT_NAME}
-    - /bin/bash make.sh
+    - ./make.sh
     - cp out/.index ${MEDIA_PATH}/${CI_PROJECT_NAME}
     - cp out/*.zip ${MEDIA_PATH}/${CI_PROJECT_NAME}
   artifacts:

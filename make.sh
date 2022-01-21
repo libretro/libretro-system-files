@@ -12,7 +12,7 @@ do
 	if [[ $? -ne 0 ]]
 	then
 	  echo "script failed: $BUILD_SCRIPT"
-	  return 1
+	  exit 1
 	fi
 done
 
