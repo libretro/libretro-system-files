@@ -1,7 +1,6 @@
 #!/bin/bash
 
 LIB_DIR="$(dirname $(which $0))"
-SRC_FILES_DIR="$(realpath "${LIB_DIR}/../src_files")"
 SRC_REPOS_DIR="$(realpath "${LIB_DIR}/../src_repos")"
 BUILD_DIR="$(realpath "${LIB_DIR}/../build")"
 OUT_DIR="$(realpath "${LIB_DIR}/../out")"
