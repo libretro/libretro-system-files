@@ -3,7 +3,7 @@
 set -e
 
 SCRIPT_DIR="$(dirname $(which $0))"
-source "${SCRIPT_DIR}/lib/common.sh"
+source "$(realpath "${SCRIPT_DIR}/lib/common.sh")"
 
 REPO_URL="https://github.com/hrydgard/ppsspp.git"
 REPO_NAME="ppsspp"
