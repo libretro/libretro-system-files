@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ROOT_DIR="$(dirname $(which $0))"
-SCRIPTS_DIR="${ROOT_DIR}/scripts"
-OUT_DIR="${ROOT_DIR}/out"
+SCRIPTS_DIR="$(realpath "${ROOT_DIR}/scripts")"
+OUT_DIR="$(realpath "${ROOT_DIR}/out")"
 
 cd "$SCRIPTS_DIR"
 

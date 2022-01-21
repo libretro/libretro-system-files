@@ -1,10 +1,10 @@
 #!/bin/bash
 
 LIB_DIR="$(dirname $(which $0))"
-SRC_FILES_DIR="${LIB_DIR}/../src_files"
-SRC_REPOS_DIR="${LIB_DIR}/../src_repos"
-BUILD_DIR="${LIB_DIR}/../build"
-OUT_DIR="${LIB_DIR}/../out"
+SRC_FILES_DIR="$(realpath "${LIB_DIR}/../src_files")"
+SRC_REPOS_DIR="$(realpath "${LIB_DIR}/../src_repos")"
+BUILD_DIR="$(realpath "${LIB_DIR}/../build")"
+OUT_DIR="$(realpath "${LIB_DIR}/../out")"
 
 # Performs a shallow clone of specified github repo,
 # updating local clone if it already exists
