@@ -8,29 +8,27 @@ source "$(realpath "${SCRIPT_DIR}/lib/common.sh")"
 REPO_URL="https://github.com/libretro/scummvm.git"
 REPO_NAME="scummvm"
 REPO_PATH="${SRC_REPOS_DIR}/${REPO_NAME}"
+REPO_BRANCH="main"
 
 SYSTEM_DIR="scummvm"
 ARCHIVE_FILE="${OUT_DIR}/ScummVM.zip"
 
-if ! update_src_repo "$REPO_URL" "$REPO_NAME"
+if ! update_src_repo "$REPO_URL" "$REPO_NAME" "$REPO_BRANCH"
 then
 	exit 1
 fi
 
-cd "${REPO_PATH}/backends/platform/libretro/aux-data"
-./bundle_aux_data.bash
+cd "${REPO_PATH}"
+git submodule init
+git submodule update
+make datafiles
 cp scummvm.zip "$BUILD_DIR"
-git checkout -- scummvm.zip
 
 cd "$BUILD_DIR"
 
 rm -rf "$SYSTEM_DIR"
 unzip scummvm.zip
 rm scummvm.zip
-
-cp -r "${REPO_PATH}/COPYRIGHT" "$SYSTEM_DIR"
-cp -r "${REPO_PATH}/COPYING"* "$SYSTEM_DIR"
-cp -r "${REPO_PATH}/backends/platform/libretro/aux-data/soundfont/README.md" "${SYSTEM_DIR}/Roland_SC-55.txt"
 
 rm -f "$ARCHIVE_FILE"
 7z a -mx9 "$ARCHIVE_FILE" "$SYSTEM_DIR"
