@@ -8,7 +8,7 @@ source "$(realpath "${SCRIPT_DIR}/lib/common.sh")"
 REPO_URL="https://github.com/libretro/scummvm.git"
 REPO_NAME="scummvm"
 REPO_PATH="${SRC_REPOS_DIR}/${REPO_NAME}"
-REPO_BRANCH="main"
+REPO_BRANCH="master"
 
 SYSTEM_DIR="scummvm"
 ARCHIVE_FILE="${OUT_DIR}/ScummVM.zip"
@@ -19,8 +19,6 @@ then
 fi
 
 cd "${REPO_PATH}"
-git submodule init
-git submodule update
 make datafiles
 cp scummvm.zip "$BUILD_DIR"
 
