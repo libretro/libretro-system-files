@@ -8,11 +8,12 @@ source "$(realpath "${SCRIPT_DIR}/lib/common.sh")"
 REPO_URL="https://github.com/icculus/DirkSimple.git"
 REPO_NAME="DirkSimple"
 REPO_PATH="${SRC_REPOS_DIR}/${REPO_NAME}"
+REPO_BRANCH="main"
 
 SYSTEM_DIR="DirkSimple"
 ARCHIVE_FILE="${OUT_DIR}/DirkSimple.zip"
 
-if ! update_src_repo "$REPO_URL" "$REPO_NAME"
+if ! update_src_repo "$REPO_URL" "$REPO_NAME" "$REPO_BRANCH"
 then
 	exit 1
 fi
