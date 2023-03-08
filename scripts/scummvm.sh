@@ -18,8 +18,8 @@ then
 	exit 1
 fi
 
-cd "${REPO_PATH}"
-make datafiles -C backends/platform/libretro
+cd "${REPO_PATH}/backends/platform/libretro"
+make datafiles
 cp scummvm.zip "$BUILD_DIR"
 
 cd "$BUILD_DIR"
