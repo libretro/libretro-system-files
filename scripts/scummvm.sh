@@ -19,7 +19,7 @@ then
 fi
 
 cd "${REPO_PATH}"
-make datafiles
+make datafiles -C backends/platform/libretro
 cp scummvm.zip "$BUILD_DIR"
 
 cd "$BUILD_DIR"
