@@ -34,7 +34,7 @@ cd "$BUILD_DIR"
 rm -rf "$SYSTEM_DIR"
 mkdir "$SYSTEM_DIR"
 cp "${REPO_PATH}/build/freej2me-lr.jar" "$SYSTEM_DIR"
-cp -r "${REPO_PATH}/LICENSE" "$SYSTEM_DIR/freej2me-license.txt"
+cp -r "${REPO_PATH}/LICENSE" "$SYSTEM_DIR/freej2me-license"
 
 rm -f "$ARCHIVE_FILE"
 7z a -mx9 "$ARCHIVE_FILE" "$SYSTEM_DIR/." # Don't have the sub-folder
