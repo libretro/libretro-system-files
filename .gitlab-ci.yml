@@ -7,6 +7,11 @@ stages:
   variables:
     MEDIA_PATH: .media
   script:
+    # freej2me: Install ant
+    - apt-get update -q -y
+    - apt-get install -y ant
+
+    # Build the system files
     - mkdir -p ${MEDIA_PATH}/${CI_PROJECT_NAME}
     - ./make.sh
     - cp out/.index ${MEDIA_PATH}/${CI_PROJECT_NAME}
