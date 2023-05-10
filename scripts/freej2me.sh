@@ -17,16 +17,17 @@ then
 	exit 1
 fi
 
-# Build the library
-cd "$REPO_PATH"
-
 # Requires "ant" to build the library
 # https://ant.apache.org/
 if ! which ant
 then
-    echo "freej2me: Missing 'ant'"
+    echo "freej2me: Missing 'ant'. Install ant to continue."
     exit 1
 fi
+
+# Build the library
+cd "$REPO_PATH"
+ant
 
 cd "$BUILD_DIR"
 
