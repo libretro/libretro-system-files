@@ -6,7 +6,7 @@ SCRIPT_DIR="$(dirname $(which $0))"
 source "$(realpath "${SCRIPT_DIR}/lib/common.sh")"
 
 REPO_URL="https://github.com/libretro/pcsx2.git"
-REPO_NAME="dolphin"
+REPO_NAME="pcsx2"
 REPO_BRANCH="libretro"
 REPO_PATH="${SRC_REPOS_DIR}/${REPO_NAME}"
 
