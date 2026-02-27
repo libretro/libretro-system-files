@@ -22,7 +22,7 @@ cd "$BUILD_DIR"
 rm -rf "$SYSTEM_DIR"
 mkdir "$SYSTEM_DIR"
 cp -r "${REPO_PATH}/Data/Sys" "$SYSTEM_DIR"
-cp -r "${REPO_PATH}/Data/license.txt" "$SYSTEM_DIR"
+cp -r "${REPO_PATH}/LICENSES/GPL-2.0-or-later.txt" "${SYSTEM_DIR}/license.txt"
 
 rm -f "$ARCHIVE_FILE"
 7z a -mx9 "$ARCHIVE_FILE" "$SYSTEM_DIR"
